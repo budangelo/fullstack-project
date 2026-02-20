@@ -1,0 +1,131 @@
+body {
+background: #060b21;
+background: linear-gradient(133deg,rgba(6, 11, 33, 1) 82%, rgba(245, 197, 66, 1) 100%);
+}
+
+.home-bg {
+  min-height: 100vh; 
+  background-image: url("/images/background2.png")b;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+}
+
+h1{
+  font-weight: 800;
+  background-color: transparent;
+}
+
+.homepage-title-container span{
+  color:#F5C542; 
+}
+
+.homepage-title-container{
+  margin-top: 8%;
+}
+
+.hero-carousel .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-carousel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+      rgba(0, 0, 0, 0) 10%,
+      rgba(0, 0, 0, 0.754) 100%
+  );
+}
+
+.hero-carousel .carousel-item {
+  height: 34vh;
+  max-height: 360px;
+}
+
+@media (min-width: 768px) {
+  .hero-carousel .carousel-item {
+    height: 42vh;
+    max-height: 480px;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-carousel .carousel-item {
+    height: 70vh;
+    max-height: 520px;
+  }
+}
+
+.hero-carousel .hero-carousel-img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-carousel .hero-carousel-img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1);
+  will-change: transform;
+}
+
+.hero-carousel .carousel-item.active .hero-carousel-img {
+  animation: heroZoom 6s ease-in-out;
+}
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-carousel .carousel-item.active .hero-carousel-img {
+    animation: none;
+  }
+}
+
+.card-home-page{
+  transition: transform .2s ease;
+  border: 2px solid transparent;
+}
+
+.card-home-page:hover {
+  transform: scale(1.03);
+  border: 2px solid #F5C542 ;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+.card-hp-btn {
+  transition: 0.3s;
+}
+
+.card-hp-btn:hover{
+  background-color: #F5C542;
+  color: #000;
+  border-color: #F5C542;
+}
+
+.pill-card{
+  transition: transform .3s;
+}
+
+.pill-card:hover {
+  transform: translateY(-10px);
+}
+
+.NewLettercontainer {
+  background-color: #F5C542;
+}
+
+.FeedbackContainer{
+  background-color: #F5C542;
+}
