@@ -2,7 +2,9 @@ import { GoogleLogin } from "@react-oauth/google";
 
 const LoginPage = () => {
   const handleSuccess = async (res) => {
-    const r = await fetch("http://localhost:4000/auth/google", {
+    const API_URL = import.meta.env.VITE_API_URL.replace(/\/$/, "");
+
+    const r = await fetch(`${API_URL}/auth/google`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ idToken: res.credential }),
