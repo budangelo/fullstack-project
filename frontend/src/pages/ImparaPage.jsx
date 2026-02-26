@@ -1,39 +1,58 @@
+import "./HomePage.css";
 
 const ImparaPage = () => {
   const lessons = [
-    { title: "Cos’è la finanza personale", text: "Le basi per gestire entrate, spese e obiettivi in modo semplice." },
-    { title: "Entrate vs spese", text: "Capire dove vanno i soldi è il primo passo per migliorare." },
-    { title: "Budget 50/30/20", text: "Un metodo pratico per distribuire le tue risorse ogni mese." },
-    { title: "Fondo d’emergenza", text: "Perché serve e come costruirlo senza stress." },
-    { title: "Inflazione", text: "Come riduce il potere d’acquisto e cosa significa per te." },
-    { title: "Interesse composto", text: "Il concetto che fa crescere un capitale nel tempo." },
-    { title: "Rischio e rendimento", text: "Più rendimento potenziale spesso significa più oscillazioni." },
-    { title: "Diversificazione", text: "Non mettere tutte le uova nello stesso paniere." },
+    { title: "Offerta e domanda", text: "Quando qualcosa è scarsa ma molto richiesta, il prezzo tende a salire. Se l’offerta è limitata (come Bitcoin) e la domanda cresce, il valore può aumentare nel tempo." },
+    { title: "Tassi d’interesse", text: "Quando i tassi salgono, prestiti e mutui costano di più e l’economia tende a rallentare. I mercati reagiscono perché cambia il “prezzo del denaro”." },
+    { title: "Banca centrale", text: "La banca centrale gestisce tassi e liquidità per controllare inflazione e stabilità. Le sue decisioni influenzano risparmi, prestiti e l’umore dei mercati." },
+    { title: "Liquidità", text: "La liquidità è la facilità con cui converti un asset in denaro, rapidamente e con poche perdite. Più un mercato è liquido, più è semplice comprare e vendere." },
+    { title: "Spread", text: "È la differenza tra prezzo di acquisto e prezzo di vendita. Se lo spread è alto, ogni operazione ti costa di più, soprattutto nei mercati poco liquidi." },
+    { title: "Market cap cripto", text: "Capitalizzazione = prezzo × monete in circolazione. Aiuta a capire la “dimensione” di una crypto: un prezzo basso non significa automaticamente che sia “economica”." },
+    { title: "Halving di Bitcoin", text: "A intervalli regolari, la nuova emissione di Bitcoin si dimezza. Questo riduce l’offerta che entra sul mercato e spesso aumenta l’attenzione degli investitori." },
+    { title: "Stablecoin", text: "Sono crypto progettate per restare stabili, spesso ancorate al dollaro. Utili per muoversi nel mondo cripto con meno volatilità rispetto a Bitcoin e altcoin." },
     { title: "Azioni", text: "Cosa rappresentano e perché il prezzo cambia." },
-    { title: "Obbligazioni", text: "Prestare denaro a enti/aziende in cambio di interessi." },
+    { title: "Token vs Coin", text: "Una coin ha una blockchain propria (es. Bitcoin). Un token vive su una blockchain esistente (es. Ethereum). La differenza aiuta a capire dipendenze, costi e utilizzi." },
     { title: "ETF", text: "Strumenti che replicano indici e semplificano la diversificazione." },
-    { title: "Indice di mercato", text: "Un termometro che riassume l’andamento di un insieme di titoli." },
+    { title: "Orso e toro", text: "Mercato “toro” = prezzi in salita e fiducia. Mercato “orso” = prezzi in calo e cautela/paura. Capire la fase aiuta a gestire aspettative ed emozioni." },
     { title: "Cos’è un dividendo", text: "Parte degli utili distribuita agli azionisti (quando previsto)." },
     { title: "Capitalizzazione", text: "Quanto “vale” un’azienda in borsa: prezzo × azioni." },
     { title: "Volatilità", text: "Quanto e quanto velocemente cambia il prezzo nel tempo." },
     { title: "Orizzonte temporale", text: "Il tempo che hai davanti influenza le scelte e la strategia." },
-    { title: "Liquidità", text: "Quanto è facile convertire un investimento in cash." },
-    { title: "Costi e commissioni", text: "Piccoli costi ripetuti possono pesare molto nel lungo periodo." },
-    { title: "DCA (piano di accumulo)", text: "Investire a rate per ridurre l’impatto delle oscillazioni." },
-    { title: "Psicologia e disciplina", text: "Decisioni emotive: il nemico numero uno della coerenza." },
+    { title: "Correzione di mercato", text: "Un calo del 10–20% può essere normale durante un trend di crescita. Non è sempre un “crash”: spesso è una pausa che riduce gli eccessi." },
+    { title: "Panico e FOMO", text: "La FOMO ti fa comprare tardi per paura di perdere il treno; il panico ti fa vendere nel momento peggiore. Una strategia scritta riduce le decisioni impulsive." },
+    { title: "Stop loss (base)", text: "È un livello di prezzo in cui chiudi una posizione per limitare la perdita. È utile, ma non è magico: nei movimenti rapidi può essere eseguito peggio del previsto." },
+    { title: "Recessione", text: "È un periodo di rallentamento economico: consumi e profitti scendono e la disoccupazione può salire. Spesso i mercati la “anticipano” prima dei dati ufficiali." },
+    { title: "Rendimenti obbligazionari", text: "Quando i rendimenti salgono, i prezzi delle obbligazioni in genere scendono. È una relazione chiave: “sicuro” non significa “senza oscillazioni”." },
+    { title: "Materie prime e inflazione", text: "Energia e cibo influenzano molti prezzi. Se petrolio e gas salgono, le aziende spesso spendono di più e l’inflazione può accelerare." },
+    { title: "Oro: ruolo storico", text: "L’oro è spesso visto come bene “rifugio” nei periodi di incertezza. Non produce interessi, ma può reggere meglio quando fiducia e mercati vacillano." },
+    { title: "Dollaro forte", text: "Quando il dollaro si rafforza, importazioni e debiti in dollari pesano di più per altri Paesi. Può influenzare materie prime e mercati globali." },
+    { title: "Dati economici chiave", text: "Inflazione, occupazione e PIL muovono i mercati perché cambiano le aspettative sui tassi. Non serve memorizzare tutto: basta capire cosa misura ogni dato." },
   ];
+
+  const isAuth = !!localStorage.getItem("tepui_token");
+  const visibleLessons = isAuth ? lessons : lessons.slice(0, 10);
+
   return (
     <section className="container my-5">
       <div className="d-flex align-items-center justify-content-between mb-3">
-        <h2 className="section-title h3 fw-bold mb-0">Impara</h2>
+        <h2 className="section-title h3 fw-bold mb-4 title-pg-custom text-light">
+          Impara con le nostre <span>Pillole</span>
+        </h2>
       </div>
+
+      {!isAuth && (
+        <p className="text-light small mb-4">
+          Accedi con Google per vedere tutte le pillole.
+        </p>
+      )}
+
       <div className="row g-3">
-        {lessons.map((item, i) => (
+        {visibleLessons.map((item, i) => (
           <div className="col-12 col-sm-6 col-lg-3" key={i}>
-            <div className="card h-100 rounded-3 shadow-sm">
+            <div className="card-bubble-custom bubble-card card h-100 rounded-3 shadow-sm">
               <div className="card-body">
                 <h6 className="fw-semibold mb-2">{item.title}</h6>
-                <p className="text-muted mb-0">{item.text}</p>
+                <p className="mb-0 text-light">{item.text}</p>
               </div>
             </div>
           </div>

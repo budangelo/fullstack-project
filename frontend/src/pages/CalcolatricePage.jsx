@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import "./HomePage.css";
 
 const Calcolatrice = () => {
   const CAPITAL_MIN = 0;
@@ -71,11 +72,11 @@ const Calcolatrice = () => {
     <div className="container my-5">
       <div className="row justify-content-center">
         <div className="col-12 col-xl-10">
-          <div className="card rounded-4 shadow-sm border overflow-hidden">
+          <div className="card rounded-4 shadow-sm border overflow-hidden bubble-card ">
             <div className="card-body p-4 p-md-5">
               <div className="mb-4">
-                <h1 className="h3 fw-bold mb-1">Calcolatrice</h1>
-                <p className="text-muted mb-0">
+                <h2 className="h3 fw-bold mb-1 title-pg-custom">Calcolatrice</h2>
+                <p className="mb-0 bubble-card-p">
                   Simulazione con capitalizzazione mensile e contributo mensile.
                 </p>
               </div>
@@ -93,7 +94,7 @@ const Calcolatrice = () => {
                       onChange={onNumberChange(setInitialCapital, CAPITAL_MIN, CAPITAL_MAX)}
                     />
                     <input
-                      className="form-range mt-2"
+                      className="form-range mt-2 range-yellow"
                       type="range"
                       min={CAPITAL_MIN}
                       max={CAPITAL_MAX}

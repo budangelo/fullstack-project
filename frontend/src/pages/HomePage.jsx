@@ -66,32 +66,32 @@ const HomePage = () => {
             <section className="container py-5">
               <div className="row g-5">
                 <div className="col-12 col-lg-6">
-                  <div className="card-home-page card h-100 rounded-4 shadow-sm">
+                  <div className="card-home-page card h-100 rounded-4 shadow-sm bubble-card">
                     <div className="card-body p-4 d-flex flex-column">
                       <h5 className="text-uppercase fw-bold display-6 mb-0">Momenti chiave della finanza</h5>
-                      <ul className="list-unstyled py-5 d-grid gap-2 mb-4">
-                        <li>• Eventi storici che hanno influenzato i mercati finanziari</li>
-                        <li>• Come il COVID ha cambiato aziende come Netflix e Zoom</li>
+                      <ul className="list-unstyled py-5 d-grid gap-4 mb-4">
+                        <li>• Chi è Satoshi Nakamoto e cos’è Bitcoin, in pratica?</li>
+                        <li>• Jordan Belfort: il “Lupo” di Wall Street famoso per truffe legate alla vendita aggressiva di penny stocks</li>
                         <li>• La nascita della borsa valori e l’evoluzione dei mercati</li>
                         <li>• Crisi e momenti chiave spiegati in modo semplice</li>
                       </ul>
-                      <button className="card-hp-btn btn btn-dark w-100 mt-auto">Esplora le storie →</button>
+                      <Link to="/storie-dei-mercati" className="card-hp-btn btn btn-dark w-100 mt-auto">Esplora le storie →</Link>
                     </div>
                   </div>
                 </div>
                 <div className="col-12 col-lg-6">
-                  <div className="card-home-page card h-100 rounded-4 shadow-sm position-relative">
-                    <span className="badge text-bg-warning rounded-pill position-absolute top-0 start-50 translate-middle px-3 py-2">
+                  <div className="card-home-page card h-100 rounded-4 shadow-sm position-relative bubble-card">
+                    <span className="badge text-bg-warning rounded-pill position-absolute top-0 start-50 translate-middle px-3 py-2 z-3">
                       New
                     </span>
                     <div className="card-body p-4 d-flex flex-column">
                       <h5 className="text-uppercase fw-bold display-6 mb-0">Calcolatrice di Interesse Composto📊</h5>
-                      <ul className="list-unstyled d-grid py-5 gap-2 mb-4">
+                      <ul className="list-unstyled d-grid py-5 gap-4 mb-4">
                         <li>•Scopri come può crescere il tuo capitale nel tempo grazie all’interesse composto.</li>
                         <li>• Simula rendimenti nel tempo (5, 10, 20 anni)</li>
                         <li>• Comprendi l’impatto del tempo sugli investimenti</li>
                       </ul>
-                      <button className="card-hp-btn btn btn-dark w-100 mt-auto">Calcola ora →</button>
+                      <Link to="/calcolatrice" className="card-hp-btn btn btn-dark w-100 mt-auto">Calcola ora →</Link>
                     </div>
                   </div>
                 </div>
@@ -101,12 +101,12 @@ const HomePage = () => {
               <div className="row g-3">
                 <div className="col-12 col-sm-6 col-lg-3">
                   <Link to="/impara" className="text-decoration-none">
-                  <div className="pill-card card h-100 rounded-3 overflow-hidden">
-                    <img src="/images/prova-card.png" className="card-img-top" alt="Pillola 01" />
+                  <div className="pill-card card h-100 rounded-3 overflow-hidden bubble-card">
+                    <img src="/images/btc-eth.png" className="card-img-top" alt="Pillola 01" />
                     <div className="card-body">
-                      <h6 className="card-title fw-semibold mb-2">Pillola 01</h6>
-                      <p className="card-text text-muted mb-0">
-                        Testo breve per introdurre un concetto base di finanza.
+                      <h6 className="card-title fw-semibold mb-2">Token vs coin</h6>
+                      <p className="card-text mb-0 bubble-card-p">
+                        Una coin ha una blockchain propria (es. Bitcoin). Un token vive su...
                       </p>
                     </div>
                   </div>
@@ -114,38 +114,38 @@ const HomePage = () => {
                 </div>
                 <div className="col-12 col-sm-6 col-lg-3">
                   <Link to="/impara" className="text-decoration-none">
-                  <div className="pill-card card h-100 rounded-3 overflow-hidden">
-                    <img src="/images/prova-card.png" className="card-img-top" alt="Pillola 02" />
+                  <div className="pill-card card h-100 rounded-3 overflow-hidden bubble-card">
+                    <img src="/images/oro.png" className="card-img-top" alt="Pillola 02" />
                     <div className="card-body">
-                      <h6 className="card-title fw-semibold mb-2">Pillola 02</h6>
-                      <p className="card-text text-muted mb-0">
-                        Testo breve per introdurre un concetto base di finanza.
+                      <h6 className="card-title fw-semibold mb-2">Oro: ruolo storico </h6>
+                      <p className="card-text mb-0 bubble-card-p">
+                        L’oro è spesso visto come bene “rifugio” nei...
                       </p>
                     </div>
                   </div>
                   </Link>
                 </div>
-                <div className="col-12 col-sm-6 col-lg-3">
+                <div className="col-12 col-sm-6 col-lg-3 ">
                   <Link to="/impara" className="text-decoration-none">
-                  <div className="pill-card card h-100 rounded-3 overflow-hidden">
-                    <img src="/images/prova-card.png" className="card-img-top" alt="Pillola 03" />
-                    <div className="card-body">
-                      <h6 className="card-title fw-semibold mb-2">Pillola 03</h6>
-                      <p className="card-text text-muted mb-0">
-                        Testo breve per introdurre un concetto base di finanza.
-                      </p>
+                    <div className="pill-card card h-100 rounded-3 overflow-hidden bubble-card">
+                      <img src="/images/prova-card.png" className="card-img-top" alt="Pillola 03" />
+                      <div className="card-body">
+                        <h6 className="card-title fw-semibold mb-2">Recessione</h6>
+                        <p className="card-text bubble-card-p mb-0">
+                          Spesso i mercati la “anticipano” prima dei...
+                        </p>
+                      </div>
                     </div>
-                  </div>
                   </Link>
                 </div>
                 <div className="col-12 col-sm-6 col-lg-3">
                   <Link to="/impara" className="text-decoration-none">
-                  <div className="pill-card card h-100 rounded-3 overflow-hidden">
-                    <img src="/images/prova-card.png" className="card-img-top" alt="Pillola 04" />
+                  <div className="pill-card card h-100 rounded-3 overflow-hidden bubble-card">
+                    <img src="/images/stablecoin.png" className="card-img-top" alt="Pillola 04" />
                     <div className="card-body">
-                      <h6 className="card-title fw-semibold mb-2">Pillola 04</h6>
-                      <p className="card-text text-muted mb-0">
-                        Testo breve per introdurre un concetto base di finanza.
+                      <h6 className="card-title fw-semibold mb-2">Stablecoin</h6>
+                      <p className="card-text bubble-card-p mb-0">
+                        Sono crypto progettate per restare stabili, spesso ancorate al...
                       </p>
                     </div>
                   </div>

@@ -172,8 +172,8 @@ const MercatiPage = () => {
     <div className="container my-4">
       <div className="d-flex flex-column flex-md-row align-items-md-end justify-content-between gap-3 mb-4">
         <div>
-          <h1 className="section-title h3 fw-bold mb-1">Mercati</h1>
-          <p className="text-muted mb-0">Quotazione + grafico (ultimi 90 giorni).</p>
+          <h2 className="section-title h3 fw-bold mb-0 title-pg-custom range-yellow">Mercati <span className="text-light">(BETA)</span></h2>
+          <p className="text-light mb-0">Quotazione + Grafico (ultimi 90 giorni).</p>
         </div>
 
         <div className="d-flex flex-wrap gap-2">
@@ -181,7 +181,7 @@ const MercatiPage = () => {
             <button
               key={c}
               type="button"
-              className={`btn btn-sm ${activeCategory === c ? "btn-primary" : "btn-outline-primary"}`}
+              className={`btn btn-sm ${activeCategory === c ? "btn-warning" : "btn-outline-warning"}`}
               onClick={() => setActiveCategory(c)}
             >
               {c}

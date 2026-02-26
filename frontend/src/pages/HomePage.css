@@ -1,6 +1,5 @@
 body {
 background: #060b21;
-background: linear-gradient(133deg,rgba(6, 11, 33, 1) 82%, rgba(245, 197, 66, 1) 100%);
 }
 
 .home-bg {
@@ -87,11 +86,6 @@ h1{
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .hero-carousel .carousel-item.active .hero-carousel-img {
-    animation: none;
-  }
-}
 
 .card-home-page{
   transition: transform .2s ease;
@@ -106,6 +100,7 @@ h1{
 
 .card-hp-btn {
   transition: 0.3s;
+  color: #F5C542;
 }
 
 .card-hp-btn:hover{
@@ -128,4 +123,39 @@ h1{
 
 .FeedbackContainer{
   background-color: #F5C542;
+}
+
+.bubble-card {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  overflow: visible;
+  color: #F5C542;
+}
+
+.bubble-card-p{
+  color: #ffff;
+}
+
+.range-yellow {
+  color: #F5C542;
+}
+
+.title-pg-custom{
+    font-size: 45px;
+}
+
+.title-pg-custom span{
+    color: #F5C542;
+}
+
+.card-bubble-custom{
+    transition: .5s;
+}
+
+.card-bubble-custom:hover{
+    color: #000;
+    background-color: #F5C542;
+    border: 1px solid #000;
+    transform: scale(1.04);
 }

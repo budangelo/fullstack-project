@@ -18,10 +18,10 @@ const run = async () => {
   console.log("Seed completed:", pills.length)
   await mongoose.disconnect()
 }
-run().catch(async (err) => {
-  console.error(err)
-  try {
-    await mongoose.disconnect()
-  } catch {}
-  process.exit(1)
-});
+  run().catch(async (err) => {
+    console.error(err)
+    try {
+      await mongoose.disconnect()
+    } catch {}
+    process.exit(1)
+  });

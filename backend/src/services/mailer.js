@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const sendWelcomeEmail = async (to) => {
-  const from = `"${process.env.FROM_NAME}" <${process.env.FROM_EMAIL}>`;
+  const from = `"${process.env.FROM_NAME}" <${process.env.FROM_EMAIL}>`
   await transporter.sendMail({
     from,
     to,

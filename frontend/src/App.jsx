@@ -9,6 +9,7 @@ import RisorsePage from "./pages/RisorsePage.jsx"
 import CalcolatricePage from "./pages/CalcolatricePage.jsx"
 import MercatiPage from "./pages/MercatiPage.jsx"
 import LoginPage from "./pages/LoginPage.jsx";
+import StoryDetailPage from "./pages/StoryDetailPage.jsx";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/Mercati" element={<MercatiPage/>}/>
           <Route path="/Calcolatrice" element={<CalcolatricePage/>}/>
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/storie/:slug" element={<StoryDetailPage />} />
         </Routes>
       <CustomFooter />
     </div>

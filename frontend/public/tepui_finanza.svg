@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="none"/>
+  <g font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" font-weight="800" font-size="360" text-anchor="middle" dominant-baseline="central">
+    <text x="210" y="270" fill="#F5C542">T</text>
+    <text x="320" y="270" fill="#FFFFFF">F</text>
+  </g>
+</svg>
