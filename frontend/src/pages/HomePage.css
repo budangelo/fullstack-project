@@ -2,14 +2,6 @@ body {
 background: #060b21;
 }
 
-.home-bg {
-  min-height: 100vh; 
-  background-image: url("/images/background2.png")b;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 100% auto;
-}
-
 h1{
   font-weight: 800;
   background-color: transparent;
