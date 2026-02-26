@@ -3,6 +3,13 @@ Tepui Finanza è una piattaforma educativa pensata per accompagnare gli utenti n
 
 ⚠️ Disclaimer: i contenuti presenti sulla piattaforma sono a scopo puramente educativo e informativo. Non costituiscono consulenza finanziaria, fiscale o d’investimento.
 
+🌍 Demo Online
+
+🔗 Frontend (Vercel): Apri il sito
+🔗 Backend (Render): Apri l’API
+
+📝 Nota: se il backend è in esecuzione su piano free, il primo caricamento potrebbe richiedere alcuni secondi.
+
 📌 Obiettivo del progetto
 
 Questo progetto è stato realizzato come Capstone Finale del percorso Full Stack Developer presso Epicode.

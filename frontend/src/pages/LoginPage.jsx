@@ -1,19 +1,31 @@
 import { GoogleLogin } from "@react-oauth/google";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
+  const navigate = useNavigate();
+
   const handleSuccess = async (res) => {
-    const API_URL = import.meta.env.VITE_API_URL.replace(/\/$/, "");
+    try {
+      const API_URL = import.meta.env.VITE_API_URL.replace(/\/$/, "");
 
-    const r = await fetch(`${API_URL}/auth/google`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ idToken: res.credential }),
-    });
+      const r = await fetch(`${API_URL}/auth/google`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ idToken: res.credential }),
+      });
 
-    const data = await r.json();
+      const data = await r.json();
 
-    if (r.ok && data.token) {
-      localStorage.setItem("tepui_token", data.token);
+      if (r.ok && data.token) {
+        localStorage.setItem("tepui_token", data.token);
+        localStorage.setItem("tepui_user", JSON.stringify(data.user));
+        navigate("/");
+        window.location.reload();
+      } else {
+        console.log("login backend failed", data);
+      }
+    } catch (error) {
+      console.log("login error", error);
     }
   };
 
